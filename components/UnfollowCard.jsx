@@ -1,5 +1,4 @@
 const UnfollowCard = ({ nonFollowers }) => {
-  console.log(nonFollowers);
   return (
     <div className=" overflow-y-auto w-3/4 h-3/4 bg-white rounded-lg flex flex-wrap justify-center p-8">
       {nonFollowers.map((f, index) => (

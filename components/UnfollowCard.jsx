@@ -1,3 +1,5 @@
+import { unfollowUser } from "../_api/api";
+
 const UnfollowCard = ({ nonFollowers }) => {
   return (
     <div className=" overflow-y-auto w-3/4 h-3/4 bg-white rounded-lg flex flex-wrap justify-center p-8">
@@ -13,7 +15,10 @@ const UnfollowCard = ({ nonFollowers }) => {
             }
           ></img>
           <p className="mt-2 font-normal">{f.username}</p>
-          <div className="font-normal bg-blue-500  text-white px-4 py-1 rounded-md cursor-pointer">
+          <div
+            onClick={() => unfollowUser(f.pk)}
+            className="font-normal bg-blue-500  text-white px-4 py-1 rounded-md cursor-pointer"
+          >
             Unfollow
           </div>
         </div>

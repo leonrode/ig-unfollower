@@ -7,8 +7,8 @@ const fetchNonFollowers = async (username, password) => {
 };
 
 const unfollowUser = async (user_pk) => {
+  console.log(user_pk);
   const res = await axios.post("/api/unfollow", { user_pk });
-
   return res.data;
 };
 

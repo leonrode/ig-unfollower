@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Home() {
   const [result, setResult] = useState(null);
   const onLoad = (res) => {
+    console.log(res);
     setResult(res.nonFollowers);
   };
   return (
